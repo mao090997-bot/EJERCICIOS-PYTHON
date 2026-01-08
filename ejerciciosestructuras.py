@@ -42,8 +42,76 @@ print(my_set)
 diccionario = {"name":"oscar", "edad": "16", 
                "apellido": "solano"} #diccionarios se usa con clave y valor y se separa con : 
 print(diccionario["apellido"]) #para ingresar a elementos
+
 diccionario["email"] = "mao090997"  #insertar elementos a dic
 diccionario["name"] = "mauricio" #actualizar elementos
-
+del diccionario["apellido"] #borrar elementos
+diccionario = dict(sorted(diccionario.items())) # Ordenación
 print(type(diccionario))
 print(diccionario)
+
+"""
+Extra
+
+"""
+
+def my_agenda():
+  
+  agenda = {}
+
+  def insertar_contacto():
+     telefono = input("ingrese numero de telefono: ")
+     if telefono.isdigit() and len(telefono) > 0 and len(telefono) <= 11: 
+        agenda[nombre] = telefono
+     else: 
+      print("Debes introducir un numero con menos de 12 digitos") 
+
+  while True: 
+
+    print("")
+    print("1. Buscar contacto")
+    print("2. Insertar contacto")
+    print("3. Actualizar contacto")
+    print("4. Eliminar contacto")
+    print("5. Salir")
+
+    opcion = input("\nSelecciona una opcion: ")
+
+    match opcion:
+        case "1":
+          nombre = input("Ingrese el nombre del contacto: ")
+          if nombre in agenda:
+             print(f"el numero de telefono de {nombre} es {agenda[nombre]}")
+             
+          else:
+              print(f"el nombre {nombre} no lo hemos encontrado")  
+          
+        case "2":
+          nombre = input("Ingrese el nombre del contacto: ")
+          
+          insertar_contacto()
+
+        case "3":
+          nombre = input("Introduce nombre a actualizar: ")
+          if nombre in agenda:
+           insertar_contacto()
+          else: 
+            print(f"el contacto {nombre} no existe")
+
+          
+        case "4":
+          nombre = input("Ingrese el nombre del contacto a eliminar: ")
+          if nombre in agenda:
+             del agenda[nombre]
+             
+
+          else: 
+             print("ingrese contacto valido")
+        case "5":
+            print("Saliendo de la agenda")
+            break
+        case _:
+            print("Opcion no valida. Elige una opcion del 1 al 5")
+
+
+my_agenda()
