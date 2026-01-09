@@ -53,4 +53,22 @@ print("oscar".count("c")) #cuenta cuantos elementos hay
 
 #formatear cadena
 
-print("oscar, {}, solano, {}".format(s1, s2))
+print("oscar, {}, solano, {}".format(s1, s2)) #formatea cadenas, agregar
+
+
+#interpolacion
+
+print(f"saludo {s1}, oscar {s2}")
+
+#Transformacion de lista de caracteres 
+print(list(s2)) #crea listas
+
+# Transformacion de listas en cadena 
+l1 = [s1, ", ", s2, "!"]
+print(" ".join(l1)) #une todos los strings y lo devuelve una sola cadena de texto, debe ser string
+
+#Transformaciones numericas 
+
+s4 = "123456"
+print(int(s4)) #convierte a numeros enteros
+print(float(s4)) #convierte a numeros float
