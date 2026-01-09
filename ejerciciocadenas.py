@@ -72,3 +72,15 @@ print(" ".join(l1)) #une todos los strings y lo devuelve una sola cadena de text
 s4 = "123456"
 print(int(s4)) #convierte a numeros enteros
 print(float(s4)) #convierte a numeros float
+
+#comprobaciones varias
+
+print(s1.isalnum()) #comprobar si tiene letras o numeros
+print(s1.isalpha()) #comprobar si tiene letras
+print(s1.isnumeric()) #si son numeros
+print(s1.isdigit()) #si son digitos 
+
+
+"""
+EXTRA 
+"""
