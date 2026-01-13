@@ -65,3 +65,32 @@ valor3, valor4 = value(hola, bebe)
 print(f"{hola}, {bebe}")
 print(f"{valor3}, {valor4}")
     
+
+
+
+# Ejercicio2
+
+a = 20
+b = 35
+
+def funcion (parametro1, parametro2): 
+    parametro1, parametro2 = parametro2, parametro1
+    return parametro1, parametro2
+parametro1, parametro2 = funcion(a, b)
+print(f"{a}, {b}")
+print(f"{parametro1}, {parametro2}")
+
+#Ejercicio3
+
+lista1 = [1, 2, 3]
+lista2 = [4, 5, 6]
+
+def listas (lista1, lista2):
+    temp = lista1[:]
+    lista1[:] = lista2
+    lista2[:] = temp
+
+    return lista1, lista2
+listas(lista1, lista2)
+print(lista1)
+print(lista2)
