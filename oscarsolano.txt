@@ -1,3 +1,1 @@
-oscar
-28
-Python
+manzana, 5, 2
