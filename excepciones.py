@@ -45,6 +45,7 @@ except ZeroDivisionError as e:
    print("no puede ser cero")
 
 except Exception as e: 
-   print(f"se ha producido un error {e}")   
+   print(f"se ha producido un error {e}")  
+finally:    
 
-print("el programa finaliza")   
+ print("el programa finaliza")   
