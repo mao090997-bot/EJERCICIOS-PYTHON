@@ -50,7 +50,12 @@ while True:
 
 
     elif option == "2":    
-        pass
+      name = input("Nombre: ")
+      with open(file_name, "r") as file:
+          for line in file.readlines():
+              if line.split(", ")[0] == name:
+                  print(line)
+                  break
     elif option == "3":    
         pass
     elif option == "4":    
@@ -64,7 +69,7 @@ while True:
     elif option == "7":
         pass
     elif option == "8":    
-        os.remove(file_name)
+        #os.remove(file_name)
         break
     else: 
         print("Seleccione una opcion disponible")    
